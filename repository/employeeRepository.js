@@ -33,10 +33,10 @@ const createNewEmployee = async (data) => {
 }
 
 
-const getAllEmployees = async (data) => {
+const getAllEmployees = async () => {
     try {
-        const existedEmployees = Employee
-
+        const existedEmployees = await Employee.find()
+        // console.log(existedEmployees)
         return existedEmployees
     } catch (error) {
         throw error

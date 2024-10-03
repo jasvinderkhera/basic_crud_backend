@@ -77,6 +77,7 @@ import { apiResponseErr,
  const deletedEmployee = async (req, res) => {
     try {
         const {employeeId} = req.query
+        console.log("ID",employeeId)
         let result = await removeEmployee(employeeId)
 
         return apiResponseSuccess(
