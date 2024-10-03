@@ -3,7 +3,7 @@ import { Employee } from "../schema/employeeSchema.js";
 
 const createNewEmployee = async (data) => {
     try {
-        const existedEmployee = await Employee.find({
+        const existedEmployee = await Employee.findOne({
             $or: [{email: data.email }, {phone: data.phone}]
         })
         if(
